@@ -5,7 +5,7 @@ A _highly_ opinionated [cookiecutter](https://github.com/cookiecutter/cookiecutt
 ## Features
 
 - Backend
-  - [Python 3.7](https://www.python.org/)
+  - [Python 3.*](https://www.python.org/)
   - [Django 2.2 LTS](https://www.djangoproject.com/)
   - [GraphQL](https://graphql.org/)
   - [Postgres](https://www.postgresql.org/)

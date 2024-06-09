@@ -4,5 +4,8 @@
   "author_name": "Your Name",
   "domain_name": "example.com",
   "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "postgres_version": "13",
+  "python_version": "3.11",
+  "node_version": "19"
 }

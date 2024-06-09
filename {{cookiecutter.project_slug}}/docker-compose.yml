@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 
 volumes:
   {{cookiecutter.project_slug}}_data: {}
@@ -28,7 +28,7 @@ services:
     restart: on-failure
 
   postgres:
-    image: postgres:10-alpine
+    image: postgres:{{cookiecutter.postgres_version}}-alpine
     ports:
       - "5432:5432"
     volumes:
