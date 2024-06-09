@@ -72,8 +72,10 @@ DOMAIN = WEBSITE_URL
 ROOT_DOMAIN = env.str('ROOT_DOMAIN')
 SESSION_COOKIE_DOMAIN = ROOT_DOMAIN
 CSRF_COOKIE_DOMAIN = ROOT_DOMAIN
-CSRF_TRUSTED_ORIGINS = [f'.{ROOT_DOMAIN}']
-
+CSRF_TRUSTED_ORIGINS = [
+    f'http://{ROOT_DOMAIN}',
+    f'https://{ROOT_DOMAIN}',
+]
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
 EMAIL_SUBJECT_PREFIX = '[{{cookiecutter.project_name}}] '
@@ -134,6 +136,9 @@ USE_L10N = True
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -265,6 +270,9 @@ GRAPHQL_JWT = {
     'JWT_EXPIRATION_DELTA': timedelta(days=30),
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
+
+# GDAL
+# GDAL_LIBRARY_PATH = env.str('GDAL_LIBRARY_PATH')
 
 # Sentry
 import sentry_sdk
